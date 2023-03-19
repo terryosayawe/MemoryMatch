@@ -30,6 +30,24 @@ struct DifficultySelectionView: View {
                             .cornerRadius(10)
                     })
                 }
+                
+                Text("Select Theme")
+                    .font(.title)
+                    .bold()
+                
+                ForEach(Theme.allCases, id: \.self) { theme in
+                    Button(action: {
+                        userSettings.theme = theme
+                    }, label: {
+                        Text(theme.description)
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    })
+                }
             }
             .padding()
             .navigationBarTitle("Memory Match", displayMode: .inline)

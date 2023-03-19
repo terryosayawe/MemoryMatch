@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MemoryMatchView(viewModel: MemoryMatchViewModel(difficulty: .easy))
+        MemoryMatchView(viewModel: MemoryMatchViewModel(difficulty: .easy, theme: .objects))
     }
 }
 

@@ -17,6 +17,8 @@
 		D621E3CF29C67FC300816600 /* DifficultySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */; };
 		D621E3D129C6829900816600 /* MemoryMatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */; };
 		D621E3D329C7000F00816600 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D229C7000F00816600 /* UserSettings.swift */; };
+		D621E3D529C7389400816600 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D429C7389400816600 /* Theme.swift */; };
+		D621E3D729C73A8000816600 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D629C73A8000816600 /* ShakeEffect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionView.swift; sourceTree = "<group>"; };
 		D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchViewModel.swift; sourceTree = "<group>"; };
 		D621E3D229C7000F00816600 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		D621E3D429C7389400816600 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D621E3D629C73A8000816600 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */,
 				D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */,
 				D621E3D229C7000F00816600 /* UserSettings.swift */,
+				D621E3D429C7389400816600 /* Theme.swift */,
+				D621E3D629C73A8000816600 /* ShakeEffect.swift */,
 			);
 			path = MemoryMatch;
 			sourceTree = "<group>";
@@ -155,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D621E3D529C7389400816600 /* Theme.swift in Sources */,
 				D621E3B929C669C200816600 /* ContentView.swift in Sources */,
 				D621E3B729C669C200816600 /* MemoryMatchApp.swift in Sources */,
+				D621E3D729C73A8000816600 /* ShakeEffect.swift in Sources */,
 				D621E3C929C67CDA00816600 /* Difficulty.swift in Sources */,
 				D621E3D129C6829900816600 /* MemoryMatchViewModel.swift in Sources */,
 				D621E3CD29C67E8700816600 /* MemoryMatchView.swift in Sources */,

@@ -14,7 +14,7 @@ struct MemoryMatchApp: App {
     var body: some Scene {
         WindowGroup {
             if let difficulty = userSettings.difficulty {
-                MemoryMatchView(viewModel: MemoryMatchViewModel(difficulty: difficulty))
+                MemoryMatchView(viewModel: MemoryMatchViewModel(difficulty: difficulty, theme: userSettings.theme ?? .objects))
                     .environmentObject(userSettings)
             } else {
                 DifficultySelectionView()

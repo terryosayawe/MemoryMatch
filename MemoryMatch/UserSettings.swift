@@ -16,10 +16,22 @@ class UserSettings: ObservableObject {
             }
         }
     }
+    
+    @Published var theme: Theme? {
+            didSet {
+                if let themeRawValue = theme?.rawValue {
+                    UserDefaults.standard.set(themeRawValue, forKey: "theme")
+                }
+            }
+        }
 
     init() {
         if let rawValue = UserDefaults.standard.value(forKey: "difficulty") as? Int {
             difficulty = Difficulty(rawValue: rawValue)
+        }
+        
+        if let themeRawValue = UserDefaults.standard.string(forKey: "theme") {
+                    theme = Theme(rawValue: themeRawValue)
         }
     }
 }

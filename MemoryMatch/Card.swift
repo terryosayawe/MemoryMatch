@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct Card<Content: View>: View {
+    var isMatched: Bool
     var faceUp: Bool
     var content: Content
     
-    init(faceUp: Bool, @ViewBuilder content: () -> Content) {
+    init(isMatched: Bool = false, faceUp: Bool, @ViewBuilder content: () -> Content) {
+        self.isMatched = isMatched
         self.faceUp = faceUp
         self.content = content()
     }
@@ -29,6 +31,8 @@ struct Card<Content: View>: View {
         }
         .aspectRatio(2 / 3, contentMode: .fit)
         .shadow(radius: 5)
+        .rotation3DEffect(faceUp ? Angle(degrees: 0) : Angle(degrees: 180), axis: (x: 0.0, y: 1.0, z: 0.0))
+        .opacity(isMatched ? 0 : 1)
     }
 }
 
