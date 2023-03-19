@@ -11,6 +11,12 @@
 		D621E3B929C669C200816600 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3B829C669C200816600 /* ContentView.swift */; };
 		D621E3BB29C669C400816600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D621E3BA29C669C400816600 /* Assets.xcassets */; };
 		D621E3BE29C669C400816600 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D621E3BD29C669C400816600 /* Preview Assets.xcassets */; };
+		D621E3C929C67CDA00816600 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3C829C67CDA00816600 /* Difficulty.swift */; };
+		D621E3CB29C67D3600816600 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3CA29C67D3600816600 /* Card.swift */; };
+		D621E3CD29C67E8700816600 /* MemoryMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3CC29C67E8700816600 /* MemoryMatchView.swift */; };
+		D621E3CF29C67FC300816600 /* DifficultySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */; };
+		D621E3D129C6829900816600 /* MemoryMatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */; };
+		D621E3D329C7000F00816600 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621E3D229C7000F00816600 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		D621E3B829C669C200816600 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D621E3BA29C669C400816600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D621E3BD29C669C400816600 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D621E3C829C67CDA00816600 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		D621E3CA29C67D3600816600 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D621E3CC29C67E8700816600 /* MemoryMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchView.swift; sourceTree = "<group>"; };
+		D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultySelectionView.swift; sourceTree = "<group>"; };
+		D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryMatchViewModel.swift; sourceTree = "<group>"; };
+		D621E3D229C7000F00816600 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,12 @@
 				D621E3B829C669C200816600 /* ContentView.swift */,
 				D621E3BA29C669C400816600 /* Assets.xcassets */,
 				D621E3BC29C669C400816600 /* Preview Content */,
+				D621E3C829C67CDA00816600 /* Difficulty.swift */,
+				D621E3CA29C67D3600816600 /* Card.swift */,
+				D621E3CC29C67E8700816600 /* MemoryMatchView.swift */,
+				D621E3CE29C67FC300816600 /* DifficultySelectionView.swift */,
+				D621E3D029C6829900816600 /* MemoryMatchViewModel.swift */,
+				D621E3D229C7000F00816600 /* UserSettings.swift */,
 			);
 			path = MemoryMatch;
 			sourceTree = "<group>";
@@ -139,6 +157,12 @@
 			files = (
 				D621E3B929C669C200816600 /* ContentView.swift in Sources */,
 				D621E3B729C669C200816600 /* MemoryMatchApp.swift in Sources */,
+				D621E3C929C67CDA00816600 /* Difficulty.swift in Sources */,
+				D621E3D129C6829900816600 /* MemoryMatchViewModel.swift in Sources */,
+				D621E3CD29C67E8700816600 /* MemoryMatchView.swift in Sources */,
+				D621E3D329C7000F00816600 /* UserSettings.swift in Sources */,
+				D621E3CF29C67FC300816600 /* DifficultySelectionView.swift in Sources */,
+				D621E3CB29C67D3600816600 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
