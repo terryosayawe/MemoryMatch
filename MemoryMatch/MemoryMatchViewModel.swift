@@ -20,6 +20,14 @@ class MemoryMatchViewModel: ObservableObject {
     @Published var theme: Theme
     @Published var isGameReady: Bool = false
     
+    var maxTime: Double {
+        Double(difficulty.rawValue) * 2.0
+    }
+
+    var remainingTime: Double {
+        maxTime - timeElapsed
+    }
+    
     private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private var timerCancellable: AnyCancellable?
     
@@ -54,7 +62,7 @@ class MemoryMatchViewModel: ObservableObject {
     func cardsMatch() -> Bool {
         let indices = Array(flippedCards)
         guard indices.count == 2 else { return false }
-        return cardData[indices[0]] % 8 == cardData[indices[1]] % 8
+        return cardData[indices[0]] % 32 == cardData[indices[1]] % 32
     }
     
     func restartGame() {
@@ -132,4 +140,12 @@ class MemoryMatchViewModel: ObservableObject {
         return max(score, 0)
     }
     
+    func resetGame() {
+        stopTimer()
+        flippedCards.removeAll()
+        matchedPairs.removeAll()
+        timeElapsed = 0
+        score = 0
+        isGameReady = false
+    }
 }

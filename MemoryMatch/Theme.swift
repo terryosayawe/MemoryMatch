@@ -11,16 +11,13 @@ import Foundation
 enum Theme: String, CaseIterable {
     case animals
     case objects
-    case colors
-
+    
     var description: String {
         switch self {
         case .animals:
             return "Animals"
         case .objects:
             return "Objects"
-        case .colors:
-            return "Colors"
         }
     }
 }

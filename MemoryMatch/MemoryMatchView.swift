@@ -6,10 +6,19 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct MemoryMatchView: View {
     @EnvironmentObject var userSettings: UserSettings
     @ObservedObject var viewModel: MemoryMatchViewModel
+    @State private var isMuted = false
+    
+    private let hapticGenerator = UINotificationFeedbackGenerator()
+    
+    private let cardFlipSound = Bundle.main.url(forResource: "cardFlip", withExtension: "mp3")
+    private let matchSound = Bundle.main.url(forResource: "match", withExtension: "mp3")
+    
+    private let soundManager = SoundManager()
     
     var gridSize: Int {
         Int(sqrt(Double(viewModel.difficulty.rawValue)))
@@ -17,6 +26,10 @@ struct MemoryMatchView: View {
     
     private func shakeCard(at index: Int) -> Bool {
         return viewModel.isGameReady && viewModel.flippedCards.count == 2 && !viewModel.cardsMatch() && viewModel.flippedCards.contains(index)
+    }
+    
+    init(viewModel: MemoryMatchViewModel) {
+        self.viewModel = viewModel
     }
     
     var body: some View {
@@ -47,19 +60,45 @@ struct MemoryMatchView: View {
     private var gameContent: some View {
         VStack {
             scoreAndTimeBar
+            Divider().padding(.vertical)
             gameGrid
         }
     }
     
     private var scoreAndTimeBar: some View {
         HStack {
-            Text("Score: \(self.viewModel.score)").font(.headline)
-            Text("Matched Pairs: \(self.viewModel.matchedPairs.count)").font(.headline)
+            Text("Score: \(self.viewModel.score)")
+                .font(.headline)
+            
             Spacer()
-            Text("Time: \(Int(self.viewModel.timeElapsed))s").font(.headline)
+            
+            Divider()
+                .frame(height: 20)
+                .padding(.horizontal, 8)
+            
+            Text("Matched Pairs: \(self.viewModel.matchedPairs.count)")
+                .font(.headline)
+            
+            Spacer()
+            
+            Divider()
+                .frame(height: 20)
+                .padding(.horizontal, 8)
+            
+            Text("Time Left: \(Int(self.viewModel.remainingTime))s").font(.headline)
+            
+            Spacer()
+            
+            Button(action: {
+                isMuted.toggle()
+            }) {
+                Image(systemName: isMuted ? "speaker.slash.fill" : "speaker.fill")
+                    .font(.headline)
+            }
         }
         .padding(.horizontal)
     }
+    
     
     private var gameGrid: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.adaptive(minimum: 100, maximum: 100), spacing: 16), count: gridSize), spacing: 16) {
@@ -72,7 +111,12 @@ struct MemoryMatchView: View {
                         .padding(4)
                 }
                 .onTapGesture {
+                    soundManager.playSound(cardFlipSound, isMuted: isMuted)
                     self.viewModel.handleCardTap(index: index)
+                    if shakeCard(at: index) {
+                        hapticGenerator.notificationOccurred(.warning)
+                        soundManager.playSound(matchSound, isMuted: isMuted)
+                    }
                 }
                 .modifier(ShakeEffect(amount: shakeCard(at: index) ? 6 : 0, times: 2, current: shakeCard(at: index) ? 1 : 0))
             }
@@ -109,20 +153,21 @@ struct MemoryMatchView: View {
             return Alert(title: Text("Congratulations!"),
                          message: Text("You've matched all \(self.viewModel.matchedPairs.count) pairs in \(Int(self.viewModel.timeElapsed)) seconds. Your score is \(self.viewModel.score)."),
                          primaryButton: .default(Text("Restart")) {
-                            self.viewModel.restartGame()
-                         },
+                self.viewModel.restartGame()
+            },
                          secondaryButton: .cancel {
-                            viewModel.isGameReady = false
-                         })
+                viewModel.resetGame()
+                
+            })
         } else {
             return Alert(title: Text("Time's Up!"),
                          message: Text("You've matched \(self.viewModel.matchedPairs.count) out of \(self.viewModel.difficulty.rawValue / 2) pairs. Your score is \(self.viewModel.score)."),
                          primaryButton: .default(Text("Restart")) {
-                            self.viewModel.restartGame()
-                         },
+                self.viewModel.restartGame()
+            },
                          secondaryButton: .cancel {
-                            viewModel.isGameReady = false
-                         })
+                viewModel.resetGame()
+            })
         }
     }
 }

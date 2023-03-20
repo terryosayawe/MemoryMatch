@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "card_5.png",
+      "filename" : "objects_5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "card_5@2x.png",
+      "filename" : "objects_5@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "card_5@3x.png",
+      "filename" : "objects_5@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
