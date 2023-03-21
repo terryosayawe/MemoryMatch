@@ -13,10 +13,10 @@ Memory Match is a simple iOS game that challenges your memory and concentration 
 
 ## Screenshots
 
-![Screenshot 1](./shots/seetings.png)
-![Screenshot 2](./shots/start.png)
-![Screenshot 3](./shots/game_scene_1.png)
-![Screenshot 4](./shots/game_scene_2.png)
+![Screenshot 1](./shoots/seetings.png)
+![Screenshot 2](./shoots/start.png)
+![Screenshot 3](./shoots/game_scene_1.png)
+![Screenshot 4](./shoots/game_scene_2.png)
 
 ## Requirements
 
