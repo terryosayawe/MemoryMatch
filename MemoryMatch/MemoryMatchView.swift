@@ -34,15 +34,30 @@ struct MemoryMatchView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Memory Match")
-                    .font(.largeTitle)
-                    .bold()
-                
-                if viewModel.isGameReady {
-                    gameContent
-                } else {
-                    startButton
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    HStack {
+                        Text("Memory")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.blue)
+                        
+                        Text("Match")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(.red)
+                    }
+                    .frame(width: geometry.size.width)
+                    .padding(.bottom, 50)
+                    
+                    if viewModel.isGameReady {
+                        gameContent
+                    } else {
+                        startButton
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                    }
+                    Spacer()
                 }
             }
             .padding()
@@ -55,13 +70,17 @@ struct MemoryMatchView: View {
                 self.viewModel.stopTimer()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarTitle("", displayMode: .inline)
     }
     
     private var gameContent: some View {
-        VStack {
-            scoreAndTimeBar
-            Divider().padding(.vertical)
-            gameGrid
+        ScrollView {
+            VStack {
+                scoreAndTimeBar
+                Divider().padding(.vertical)
+                gameGrid
+            }
         }
     }
     

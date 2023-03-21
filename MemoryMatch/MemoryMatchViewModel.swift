@@ -123,8 +123,6 @@ class MemoryMatchViewModel: ObservableObject {
                 return 1.5
             case .hard:
                 return 2.0
-            case .veryEasy:
-                return 0.5
             }
         }()
         

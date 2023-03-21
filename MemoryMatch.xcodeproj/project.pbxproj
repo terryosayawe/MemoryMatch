@@ -22,6 +22,7 @@
 		D6B9D5B029C7B0CB0085FF7C /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9D5AF29C7B0CB0085FF7C /* SoundManager.swift */; };
 		D6B9D5B929C7B2100085FF7C /* cardFlip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6B9D5B729C7B20F0085FF7C /* cardFlip.mp3 */; };
 		D6B9D5BA29C7B2100085FF7C /* match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6B9D5B829C7B2100085FF7C /* match.mp3 */; };
+		D6B9D5BC29CA176B0085FF7C /* AnimatedSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9D5BB29CA176B0085FF7C /* AnimatedSplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D6B9D5AF29C7B0CB0085FF7C /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		D6B9D5B729C7B20F0085FF7C /* cardFlip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cardFlip.mp3; sourceTree = "<group>"; };
 		D6B9D5B829C7B2100085FF7C /* match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = match.mp3; sourceTree = "<group>"; };
+		D6B9D5BB29CA176B0085FF7C /* AnimatedSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				D621E3D429C7389400816600 /* Theme.swift */,
 				D621E3D629C73A8000816600 /* ShakeEffect.swift */,
 				D6B9D5AF29C7B0CB0085FF7C /* SoundManager.swift */,
+				D6B9D5BB29CA176B0085FF7C /* AnimatedSplashScreen.swift */,
 			);
 			path = MemoryMatch;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				D621E3CF29C67FC300816600 /* DifficultySelectionView.swift in Sources */,
 				D6B9D5B029C7B0CB0085FF7C /* SoundManager.swift in Sources */,
 				D621E3CB29C67D3600816600 /* Card.swift in Sources */,
+				D6B9D5BC29CA176B0085FF7C /* AnimatedSplashScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,11 +326,14 @@
 				DEVELOPMENT_TEAM = 7D33GSZV3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "MemMatch Master";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,11 +358,14 @@
 				DEVELOPMENT_TEAM = 7D33GSZV3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "MemMatch Master";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
