@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/terdia/apps/ios/MemoryMatch/MemMatchMaster.xcodeproj">
    </FileRef>
 </Workspace>
